@@ -3,10 +3,25 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "cross-env DB_ENV=testing jest --watchAll --verbose --runInBand",
+    "server": "nodemon index.js"
+  },
+  "jest": {
+    "testEnvironment": "node"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/bloominstituteoftechnology/node-testing2-project.git"
+  },
+  "dependencies": {
+    "cross-env": "^7.0.3",
+    "eslint": "^8.50.0",
+    "expres": "^0.0.5",
+    "express": "^4.18.2",
+    "jest": "^29.7.0",
+    "knex": "^2.5.1",
+    "nodemon": "^3.0.1",
+    "sqlite3": "^5.1.6",
+    "supertest": "^6.3.3"
   }
 }
